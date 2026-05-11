@@ -1,0 +1,67 @@
+aid: hpe
+name: Hewlett Packard Enterprise
+description: >-
+  Hewlett Packard Enterprise (HPE) is a global edge-to-cloud technology
+  company providing servers, storage, networking, and hybrid cloud
+  services, with HPE GreenLake serving as the unified edge-to-cloud
+  platform delivering infrastructure as a service. The HPE GreenLake
+  developer platform exposes OpenAPI 3.0 REST APIs covering compute,
+  storage, networking, data services, identity, and workspace management,
+  all authenticated via OAuth 2.0 client credentials and bearer tokens
+  through a unified global API gateway.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Cloud
+  - Edge to Cloud
+  - Infrastructure as a Service
+  - Compute
+  - Storage
+  - Networking
+  - Hybrid Cloud
+  - Enterprise IT
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/hpe/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: hpe:greenlake-api
+    name: HPE GreenLake API
+    description: >-
+      Unified REST API gateway for HPE GreenLake edge-to-cloud services
+      including Compute Ops Management, Data Services Cloud Console,
+      identity, workspaces, and API client credentials. Conforms to
+      OpenAPI 3.0 and authenticates with OAuth 2.0 client credentials
+      that issue short-lived JWT bearer tokens.
+    humanURL: https://developer.greenlake.hpe.com
+    baseURL: https://global.api.greenlake.hpe.com
+    tags:
+      - Cloud
+      - Compute
+      - Storage
+      - Data Services
+      - Identity
+      - OAuth 2.0
+    properties:
+      - type: Documentation
+        url: https://developer.greenlake.hpe.com/docs/greenlake/guides
+      - type: Authentication
+        url: https://developer.greenlake.hpe.com/docs/greenlake/guides/public/authentication/authentication
+      - type: API Catalog
+        url: https://developer.greenlake.hpe.com/docs/greenlake/services
+      - type: Credentials Guide
+        url: https://developer.greenlake.hpe.com/docs/greenlake/services/credentials/public/guide
+
+common:
+  - type: Website
+    url: https://www.hpe.com
+  - type: Documentation
+    url: https://developer.greenlake.hpe.com
+  - type: Developer Portal
+    url: https://developer.hpe.com
+  - type: Sign Up
+    url: https://common.cloud.hpe.com/sign-up
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
