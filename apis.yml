@@ -54,6 +54,10 @@ apis:
         url: https://developer.greenlake.hpe.com/docs/greenlake/services/credentials/public/guide
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/HewlettPackard
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/hewlett-packard-enterprise
   - type: Website
     url: https://www.hpe.com
   - type: Documentation
