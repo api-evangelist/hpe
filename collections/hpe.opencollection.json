@@ -1,0 +1,334 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "HPE GreenLake API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List API client credentials",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://global.api.greenlake.hpe.com/workspaces/v1/credentials"
+      },
+      "docs": "List API client credentials"
+    },
+    {
+      "info": {
+        "name": "Create an API client credential",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://global.api.greenlake.hpe.com/workspaces/v1/credentials"
+      },
+      "docs": "Create an API client credential"
+    },
+    {
+      "info": {
+        "name": "Delete an API client credential",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://global.api.greenlake.hpe.com/workspaces/v1/credentials/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete an API client credential"
+    },
+    {
+      "info": {
+        "name": "Reset (regenerate) a credential's clientSecret",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://global.api.greenlake.hpe.com/workspaces/v1/credentials/:id/reset",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Reset (regenerate) a credential's clientSecret"
+    },
+    {
+      "info": {
+        "name": "List users in the workspace",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://global.api.greenlake.hpe.com/identity/v1/users"
+      },
+      "docs": "List users in the workspace"
+    },
+    {
+      "info": {
+        "name": "Invite a user to the workspace",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://global.api.greenlake.hpe.com/identity/v1/users"
+      },
+      "docs": "Invite a user to the workspace"
+    },
+    {
+      "info": {
+        "name": "Get a specific user",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://global.api.greenlake.hpe.com/identity/v1/users/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a specific user"
+    },
+    {
+      "info": {
+        "name": "Update user preferences",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://global.api.greenlake.hpe.com/identity/v1/users/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update user preferences"
+    },
+    {
+      "info": {
+        "name": "Delete a user from the workspace",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://global.api.greenlake.hpe.com/identity/v1/users/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a user from the workspace"
+    },
+    {
+      "info": {
+        "name": "Create a scope group",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/scope-groups"
+      },
+      "docs": "Create a scope group"
+    },
+    {
+      "info": {
+        "name": "Retrieve a scope group",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/scope-groups/:scope-group-id",
+        "params": [
+          {
+            "name": "scope-group-id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve a scope group"
+    },
+    {
+      "info": {
+        "name": "Update a scope group",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/scope-groups/:scope-group-id",
+        "params": [
+          {
+            "name": "scope-group-id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update a scope group"
+    },
+    {
+      "info": {
+        "name": "Delete a scope group",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/scope-groups/:scope-group-id",
+        "params": [
+          {
+            "name": "scope-group-id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a scope group"
+    },
+    {
+      "info": {
+        "name": "List scopes in a scope group",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/scope-groups/:scope-group-id/scopes",
+        "params": [
+          {
+            "name": "scope-group-id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List scopes in a scope group"
+    },
+    {
+      "info": {
+        "name": "Add resources to a scope group",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/scope-groups/:scope-group-id/scopes/batch",
+        "params": [
+          {
+            "name": "scope-group-id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Add resources to a scope group"
+    },
+    {
+      "info": {
+        "name": "Remove multiple scopes from a scope group",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/scope-groups/:scope-group-id/scopes/bulk",
+        "params": [
+          {
+            "name": "scope-group-id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Remove multiple scopes from a scope group"
+    },
+    {
+      "info": {
+        "name": "Create a role assignment",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/role-assignments"
+      },
+      "docs": "Create a role assignment"
+    },
+    {
+      "info": {
+        "name": "Retrieve a role assignment",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/role-assignments/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Retrieve a role assignment"
+    },
+    {
+      "info": {
+        "name": "Update a role assignment",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/role-assignments/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update a role assignment"
+    },
+    {
+      "info": {
+        "name": "Delete a role assignment",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://global.api.greenlake.hpe.com/authorization/v1beta1/role-assignments/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a role assignment"
+    }
+  ],
+  "bundled": true
+}
