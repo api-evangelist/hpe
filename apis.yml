@@ -10,7 +10,7 @@ description: >-
   all authenticated via OAuth 2.0 client credentials and bearer tokens
   through a unified global API gateway.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Cloud
   - Edge to Cloud
