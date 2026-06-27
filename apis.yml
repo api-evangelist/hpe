@@ -62,9 +62,9 @@ common:
     url: https://www.hpe.com
   - type: Documentation
     url: https://developer.greenlake.hpe.com
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://developer.hpe.com
-  - type: SignUp
+  - type: Signup
     url: https://common.cloud.hpe.com/sign-up
 maintainers:
   - FN: Kin Lane
