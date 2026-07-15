@@ -54,6 +54,8 @@ apis:
         url: https://developer.greenlake.hpe.com/docs/greenlake/services/credentials/public/guide
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/hpe-agentic-access.yml
   - type: DomainSecurity
     url: security/hpe-domain-security.yml
   - type: Authentication
