@@ -1,0 +1,87 @@
+openapi: 3.1.0
+info:
+  title: HPE GreenLake Authorization Identity API
+  description: 'Unified REST API gateway for HPE GreenLake edge-to-cloud services
+
+    documented at developer.greenlake.hpe.com. Covers identity (user
+
+    management), API client credentials, workspaces, and authorization
+
+    (scope groups and role assignments). Conforms to OpenAPI 3.0 and
+
+    authenticates with OAuth 2.0 client credentials that issue
+
+    short-lived JWT bearer tokens.
+
+    '
+  version: '1.0'
+  contact:
+    name: HPE GreenLake Developer
+    url: https://developer.greenlake.hpe.com/docs/greenlake/guides
+servers:
+- url: https://global.api.greenlake.hpe.com
+  description: HPE GreenLake unified API gateway
+security:
+- BearerAuth: []
+tags:
+- name: Identity
+paths:
+  /identity/v1/users:
+    get:
+      summary: List users in the workspace
+      operationId: listUsers
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Identity
+    post:
+      summary: Invite a user to the workspace
+      operationId: inviteUser
+      responses:
+        '201':
+          description: Created
+      tags:
+      - Identity
+  /identity/v1/users/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get a specific user
+      operationId: getUser
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Identity
+    put:
+      summary: Update user preferences
+      operationId: updateUser
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Identity
+    delete:
+      summary: Delete a user from the workspace
+      operationId: deleteUser
+      responses:
+        '204':
+          description: Deleted
+      tags:
+      - Identity
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: 'OAuth 2.0 client-credentials access token. Use the token as
+
+        `Authorization: Bearer <token>` on every request.
+
+        '
