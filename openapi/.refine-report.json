@@ -1,0 +1,18 @@
+{
+  "provider": "hpe",
+  "sources": [
+    "hpe-authorization-api-openapi.yml",
+    "hpe-identity-api-openapi.yml",
+    "hpe-workspaces-api-openapi.yml"
+  ],
+  "outputs": [
+    "hpe-authorization-api-openapi.yml",
+    "hpe-identity-api-openapi.yml",
+    "hpe-workspaces-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
