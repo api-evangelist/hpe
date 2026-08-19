@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "HPE GreenLake Authorization Identity API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Identity",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List users in the workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://global.api.greenlake.hpe.com/identity/v1/users"
+          },
+          "docs": "List users in the workspace"
+        },
+        {
+          "info": {
+            "name": "Invite a user to the workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://global.api.greenlake.hpe.com/identity/v1/users"
+          },
+          "docs": "Invite a user to the workspace"
+        },
+        {
+          "info": {
+            "name": "Get a specific user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://global.api.greenlake.hpe.com/identity/v1/users/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific user"
+        },
+        {
+          "info": {
+            "name": "Update user preferences",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://global.api.greenlake.hpe.com/identity/v1/users/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update user preferences"
+        },
+        {
+          "info": {
+            "name": "Delete a user from the workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://global.api.greenlake.hpe.com/identity/v1/users/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a user from the workspace"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

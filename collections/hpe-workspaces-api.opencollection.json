@@ -1,0 +1,82 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "HPE GreenLake Authorization Workspaces API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Workspaces",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List API client credentials",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://global.api.greenlake.hpe.com/workspaces/v1/credentials"
+          },
+          "docs": "List API client credentials"
+        },
+        {
+          "info": {
+            "name": "Create an API client credential",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://global.api.greenlake.hpe.com/workspaces/v1/credentials"
+          },
+          "docs": "Create an API client credential"
+        },
+        {
+          "info": {
+            "name": "Delete an API client credential",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://global.api.greenlake.hpe.com/workspaces/v1/credentials/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an API client credential"
+        },
+        {
+          "info": {
+            "name": "Reset (regenerate) a credential's clientSecret",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://global.api.greenlake.hpe.com/workspaces/v1/credentials/:id/reset",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Reset (regenerate) a credential's clientSecret"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
