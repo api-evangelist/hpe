@@ -26,6 +26,15 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hpe.png
 tags:
   - Cloud
   - Edge to Cloud
+  - Infrastructure-as-a-Service
+  - Compute
+  - Storage
+  - Networking
+  - Hybrid Cloud
+  - Enterprise IT
+tags_raw:
+  - Cloud
+  - Edge to Cloud
   - Infrastructure as a Service
   - Compute
   - Storage
@@ -47,6 +56,13 @@ apis:
   humanURL: https://developer.greenlake.hpe.com
   baseURL: https://global.api.greenlake.hpe.com
   tags:
+  - Cloud
+  - Compute
+  - Storage
+  - Data Services
+  - Identity
+  - Authentication
+  tags_raw:
   - Cloud
   - Compute
   - Storage
