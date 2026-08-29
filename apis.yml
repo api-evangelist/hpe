@@ -123,6 +123,9 @@ apis:
   - type: OpenAPI
     url: openapi/hpe-workspaces-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/hpe-capability-edges.yml
+    name: Hewlett Packard Enterprise Business Capability Map
   - type: AgenticAccess
     url: agentic-access/hpe-agentic-access.yml
   - type: DomainSecurity

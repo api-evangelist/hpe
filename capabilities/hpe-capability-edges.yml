@@ -1,0 +1,46 @@
+slug: hpe
+provider: Hewlett Packard Enterprise
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Telecommunications
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Authorization
+  spec_file: hpe-authorization-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.9
+  evidence: POST /authorization/v1beta1/role-assignments  createRoleAssignment  Create a role assignment;
+    'Create a scope group'
+  reason: Operations manage scope groups and role assignments — authorization/access control administration,
+    which is Identity & Access Management under Cybersecurity Management.
+- tag: Identity
+  spec_file: hpe-identity-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.85
+  evidence: GET /identity/v1/users listUsers 'List users in the workspace'; POST /identity/v1/users inviteUser
+    'Invite a user to the workspace'
+  reason: User lifecycle in a cloud workspace — invite, update, delete users — is identity administration
+    (joiners-movers-leavers), mapping to Identity & Access Management. Not HR employee records.
+- tag: Workspaces
+  spec_file: hpe-workspaces-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: POST /workspaces/v1/credentials createCredential 'Create an API client credential'; 'Reset
+    (regenerate) a credential's clientSecret'
+  reason: Despite the 'Workspaces' tag, the operations solely manage API client credentials and secret
+    rotation — machine identity/credential management. Closest honest fit is Identity & Access Management;
+    some ambiguity as this could be read as pure API-platform plumbing.
