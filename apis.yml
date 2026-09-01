@@ -38,7 +38,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hpe.png
 tags:
   - Cloud
   - Edge to Cloud
-  - Infrastructure as a Service
+  - Infrastructure-as-a-Service
   - Compute
   - Storage
   - Networking
