@@ -119,6 +119,8 @@ apis:
   humanURL: https://developer.greenlake.hpe.com
   baseURL: https://global.api.greenlake.hpe.com
   tags:
+  - Workspace
+  tags_raw:
   - Workspaces
   properties:
   - type: OpenAPI
