@@ -11,7 +11,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 2
+edge_count: 3
 edges:
 - tag: Authorization
   spec_file: hpe-authorization-api-openapi.yml
@@ -32,3 +32,15 @@ edges:
     workspace"'
   reason: User account lifecycle (invite, update, delete) within a cloud platform workspace is joiner-mover-leaver
     style identity administration, not HR employee records.
+- tag: Workspaces
+  spec_file: hpe-workspaces-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.7
+  evidence: POST /workspaces/v1/credentials createCredential 'Create an API client credential'; 'Reset
+    (regenerate) a credential's clientSecret'
+  reason: Despite the 'Workspaces' tag, the operations solely manage API client credentials and secret
+    rotation — machine identity/credential management. Closest honest fit is Identity & Access Management;
+    some ambiguity as this could be read as pure API-platform plumbing.
+  recovered_from: vertical-telecommunications-edges.json
