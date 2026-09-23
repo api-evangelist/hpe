@@ -1,9 +1,7 @@
 {
   "provider": "hpe",
   "sources": [
-    "hpe-authorization-api-openapi.yml",
-    "hpe-identity-api-openapi.yml",
-    "hpe-workspaces-api-openapi.yml"
+    "_original/hpe-openapi.yml"
   ],
   "outputs": [
     "hpe-authorization-api-openapi.yml",
@@ -13,6 +11,37 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "hpe-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "hpe-openapi.yml: tagged paths GET /workspaces/v1/credentials -> Workspaces",
+    "hpe-openapi.yml: tagged paths POST /workspaces/v1/credentials -> Workspaces",
+    "hpe-openapi.yml: tagged paths DELETE /workspaces/v1/credentials/{id} -> Workspaces",
+    "hpe-openapi.yml: tagged paths POST /workspaces/v1/credentials/{id}/reset -> Workspaces",
+    "hpe-openapi.yml: tagged paths GET /identity/v1/users -> Identity",
+    "hpe-openapi.yml: tagged paths POST /identity/v1/users -> Identity",
+    "hpe-openapi.yml: tagged paths GET /identity/v1/users/{id} -> Identity",
+    "hpe-openapi.yml: tagged paths PUT /identity/v1/users/{id} -> Identity",
+    "hpe-openapi.yml: tagged paths DELETE /identity/v1/users/{id} -> Identity",
+    "hpe-openapi.yml: tagged paths POST /authorization/v1beta1/scope-groups -> Authorization",
+    "hpe-openapi.yml: tagged paths GET /authorization/v1beta1/scope-groups/{scope-group-id} -> Authorization",
+    "hpe-openapi.yml: tagged paths PUT /authorization/v1beta1/scope-groups/{scope-group-id} -> Authorization",
+    "hpe-openapi.yml: tagged paths DELETE /authorization/v1beta1/scope-groups/{scope-group-id} -> Authorization",
+    "hpe-openapi.yml: tagged paths GET /authorization/v1beta1/scope-groups/{scope-group-id}/scopes -> Authorization",
+    "hpe-openapi.yml: tagged paths POST /authorization/v1beta1/scope-groups/{scope-group-id}/scopes/batch -> Authorization",
+    "hpe-openapi.yml: tagged paths DELETE /authorization/v1beta1/scope-groups/{scope-group-id}/scopes/bulk -> Authorization",
+    "hpe-openapi.yml: tagged paths POST /authorization/v1beta1/role-assignments -> Authorization",
+    "hpe-openapi.yml: tagged paths GET /authorization/v1beta1/role-assignments/{id} -> Authorization",
+    "hpe-openapi.yml: tagged paths PUT /authorization/v1beta1/role-assignments/{id} -> Authorization",
+    "hpe-openapi.yml: tagged paths DELETE /authorization/v1beta1/role-assignments/{id} -> Authorization",
+    "hpe-openapi.yml: declared missing tag: Authorization",
+    "hpe-openapi.yml: declared missing tag: Identity",
+    "hpe-openapi.yml: declared missing tag: Workspaces",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "hpe-authorization-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hpe-identity-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hpe-workspaces-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
