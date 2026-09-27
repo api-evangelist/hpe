@@ -2,15 +2,13 @@ aid: hpe
 
 name: Hewlett Packard Enterprise
 
-description: >-
-  Hewlett Packard Enterprise (HPE) is a global edge-to-cloud technology
-  company providing servers, storage, networking, and hybrid cloud
-  services, with HPE GreenLake serving as the unified edge-to-cloud
-  platform delivering infrastructure as a service. The HPE GreenLake
-  developer platform exposes OpenAPI 3.0 REST APIs covering compute,
-  storage, networking, data services, identity, and workspace management,
-  all authenticated via OAuth 2.0 client credentials and bearer tokens
-  through a unified global API gateway.
+description: Hewlett Packard Enterprise (HPE) is a global edge-to-cloud technology
+  company providing servers, storage, networking, and hybrid cloud services, with
+  HPE GreenLake serving as the unified edge-to-cloud platform delivering infrastructure
+  as a service. The HPE GreenLake developer platform exposes OpenAPI 3.0 REST APIs
+  covering compute, storage, networking, data services, identity, and workspace management,
+  all authenticated via OAuth 2.0 client credentials and bearer tokens through a unified
+  global API gateway.
 
 type: Index
 
@@ -44,27 +42,28 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hpe.png
 
 tags:
-  - Cloud
-  - Edge to Cloud
-  - Infrastructure-as-a-Service
-  - Compute
-  - Storage
-  - Networking
-  - Hybrid Cloud
-  - Enterprise IT
+- Cloud
+- Edge to Cloud
+- Infrastructure-as-a-Service
+- Compute
+- Storage
+- Networking
+- Hybrid Cloud
+- Enterprise IT
+- Data Center
 
 tags_raw:
-  - Cloud
-  - Edge to Cloud
-  - Infrastructure as a Service
-  - Compute
-  - Storage
-  - Networking
-  - Hybrid Cloud
-  - Enterprise IT
+- Cloud
+- Edge to Cloud
+- Infrastructure as a Service
+- Compute
+- Storage
+- Networking
+- Hybrid Cloud
+- Enterprise IT
+- Data Center
 
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/hpe/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/hpe/refs/heads/main/apis.yml
 
 created: '2026-05-11'
 
@@ -73,65 +72,67 @@ modified: '2026-05-11'
 specificationVersion: '0.23'
 
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
 
 common:
-  - type: RateLimits
-    url: rate-limits/hpe-rate-limits.yml
-  - type: Spectral
-    url: rules/hpe-rules.yml
-  - type: Vocabulary
-    url: vocabulary/hpe-vocabulary.yml
-  - type: AgentSkill
-    url: skills/_index.yml
-  - type: ChangeLog
-    url: changelog/hpe-changelog.yml
-  - type: Conventions
-    url: conventions/hpe-conventions.yml
-  - type: Deprecation
-    url: lifecycle/hpe-lifecycle.yml
-  - type: Lifecycle
-    url: lifecycle/hpe-lifecycle.yml
-  - type: Conformance
-    url: conformance/hpe-conformance.yml
-  - type: LLMsTxt
-    url: llms/hpe-llms.txt
-  - type: Hosts
-    url: hosts/hpe-hosts.yml
-  - type: Vendors
-    url: vendors/hpe-vendors.yml
-  - type: GettingStarted
-    url: https://developer.greenlake.hpe.com/docs/greenlake/services/compute-ops-mgmt/ahs/guide
-  - type: CapabilityMap
-    url: capabilities/hpe-capability-edges.yml
-    name: Hewlett Packard Enterprise Business Capability Map
-  - type: AgenticAccess
-    url: agentic-access/hpe-agentic-access.yml
-  - type: DomainSecurity
-    url: security/hpe-domain-security.yml
-  - type: Authentication
-    url: authentication/hpe-authentication.yml
-  - type: GitHubOrganization
-    url: https://github.com/HewlettPackard
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/hewlett-packard-enterprise
-  - type: Website
-    url: https://www.hpe.com
-  - type: Documentation
-    url: https://developer.greenlake.hpe.com
-  - type: DeveloperPortal
-    url: https://developer.hpe.com
-  - type: Signup
-    url: https://common.cloud.hpe.com/sign-up
+- type: RateLimits
+  url: rate-limits/hpe-rate-limits.yml
+- type: Spectral
+  url: rules/hpe-rules.yml
+- type: Vocabulary
+  url: vocabulary/hpe-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: ChangeLog
+  url: changelog/hpe-changelog.yml
+- type: Conventions
+  url: conventions/hpe-conventions.yml
+- type: Deprecation
+  url: lifecycle/hpe-lifecycle.yml
+- type: Lifecycle
+  url: lifecycle/hpe-lifecycle.yml
+- type: Conformance
+  url: conformance/hpe-conformance.yml
+- type: LLMsTxt
+  url: llms/hpe-llms.txt
+- type: Hosts
+  url: hosts/hpe-hosts.yml
+- type: Vendors
+  url: vendors/hpe-vendors.yml
+- type: GettingStarted
+  url: https://developer.greenlake.hpe.com/docs/greenlake/services/compute-ops-mgmt/ahs/guide
+- type: CapabilityMap
+  url: capabilities/hpe-capability-edges.yml
+  name: Hewlett Packard Enterprise Business Capability Map
+- type: AgenticAccess
+  url: agentic-access/hpe-agentic-access.yml
+- type: DomainSecurity
+  url: security/hpe-domain-security.yml
+- type: Authentication
+  url: authentication/hpe-authentication.yml
+- type: GitHubOrganization
+  url: https://github.com/HewlettPackard
+- type: LinkedIn
+  url: https://www.linkedin.com/company/hewlett-packard-enterprise
+- type: Website
+  url: https://www.hpe.com
+- type: Documentation
+  url: https://developer.greenlake.hpe.com
+- type: DeveloperPortal
+  url: https://developer.hpe.com
+- type: Signup
+  url: https://common.cloud.hpe.com/sign-up
+- type: GitHubOrganization
+  url: https://github.com/HPE
 
 apis:
 - aid: hpe:greenlake-api
   name: HPE GreenLake API
-  description: >-
-    Unified REST API gateway for HPE GreenLake edge-to-cloud services including Compute Ops Management,
-    Data Services Cloud Console, identity, workspaces, and API client credentials. Conforms to OpenAPI
-    3.0 and authenticates with OAuth 2.0 client credentials that issue short-lived JWT bearer tokens.
+  description: Unified REST API gateway for HPE GreenLake edge-to-cloud services including
+    Compute Ops Management, Data Services Cloud Console, identity, workspaces, and
+    API client credentials. Conforms to OpenAPI 3.0 and authenticates with OAuth 2.0
+    client credentials that issue short-lived JWT bearer tokens.
   humanURL: https://developer.greenlake.hpe.com
   baseURL: https://global.api.greenlake.hpe.com
   tags:
@@ -152,16 +153,15 @@ apis:
   - type: Documentation
     url: https://developer.greenlake.hpe.com/docs/greenlake/guides
   - type: Authentication
-    url: >-
-      https://developer.greenlake.hpe.com/docs/greenlake/guides/public/authentication/authentication
+    url: https://developer.greenlake.hpe.com/docs/greenlake/guides/public/authentication/authentication
   - type: API Catalog
     url: https://developer.greenlake.hpe.com/docs/greenlake/services
   - type: Credentials Guide
     url: https://developer.greenlake.hpe.com/docs/greenlake/services/credentials/public/guide
 - aid: hpe:hpe-authorization-api
   name: Hewlett Packard Enterprise Authorization API
-  description: >-
-    The Authorization API from Hewlett Packard Enterprise — 7 operation(s) for authorization.
+  description: The Authorization API from Hewlett Packard Enterprise — 7 operation(s)
+    for authorization.
   humanURL: https://developer.greenlake.hpe.com
   baseURL: https://global.api.greenlake.hpe.com
   tags:
@@ -171,7 +171,8 @@ apis:
     url: openapi/hpe-authorization-api-openapi.yml
 - aid: hpe:hpe-identity-api
   name: Hewlett Packard Enterprise Identity API
-  description: The Identity API from Hewlett Packard Enterprise — 2 operation(s) for identity.
+  description: The Identity API from Hewlett Packard Enterprise — 2 operation(s) for
+    identity.
   humanURL: https://developer.greenlake.hpe.com
   baseURL: https://global.api.greenlake.hpe.com
   tags:
@@ -181,7 +182,8 @@ apis:
     url: openapi/hpe-identity-api-openapi.yml
 - aid: hpe:hpe-workspaces-api
   name: Hewlett Packard Enterprise Workspaces API
-  description: The Workspaces API from Hewlett Packard Enterprise — 3 operation(s) for workspaces.
+  description: The Workspaces API from Hewlett Packard Enterprise — 3 operation(s)
+    for workspaces.
   humanURL: https://developer.greenlake.hpe.com
   baseURL: https://global.api.greenlake.hpe.com
   tags:
@@ -195,11 +197,13 @@ apis:
 x-coverage:
   state: unreadable
   reason: js-rendered-docs
-  detail: Documentation pages are rendered via Redocly and the API host returns 403 for OpenAPI endpoints, preventing machine-readable spec retrieval.
+  detail: Documentation pages are rendered via Redocly and the API host returns 403
+    for OpenAPI endpoints, preventing machine-readable spec retrieval.
   evidence:
-    - url: https://global.api.greenlake.hpe.com/openapi.json
-      status: 403
+  - url: https://global.api.greenlake.hpe.com/openapi.json
+    status: 403
   checked: '2026-10-04'
+
 x-enrichment:
   date: '2026-10-04'
   status: enriched
