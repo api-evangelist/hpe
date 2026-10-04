@@ -2,13 +2,12 @@ aid: hpe
 
 name: Hewlett Packard Enterprise
 
-description: Hewlett Packard Enterprise (HPE) is a global edge-to-cloud technology
-  company providing servers, storage, networking, and hybrid cloud services, with
-  HPE GreenLake serving as the unified edge-to-cloud platform delivering infrastructure
-  as a service. The HPE GreenLake developer platform exposes OpenAPI 3.0 REST APIs
-  covering compute, storage, networking, data services, identity, and workspace management,
-  all authenticated via OAuth 2.0 client credentials and bearer tokens through a unified
-  global API gateway.
+description: Hewlett Packard Enterprise (HPE) is a global edge-to-cloud technology company
+  providing servers, storage, networking, and hybrid cloud services, with HPE GreenLake
+  serving as the unified edge-to-cloud platform delivering infrastructure as a service.
+  The HPE GreenLake developer platform exposes OpenAPI 3.0 REST APIs covering compute,
+  storage, networking, data services, identity, and workspace management, all authenticated
+  via OAuth 2.0 client credentials and bearer tokens through a unified global API gateway.
 
 type: Index
 
@@ -130,9 +129,9 @@ apis:
 - aid: hpe:greenlake-api
   name: HPE GreenLake API
   description: Unified REST API gateway for HPE GreenLake edge-to-cloud services including
-    Compute Ops Management, Data Services Cloud Console, identity, workspaces, and
-    API client credentials. Conforms to OpenAPI 3.0 and authenticates with OAuth 2.0
-    client credentials that issue short-lived JWT bearer tokens.
+    Compute Ops Management, Data Services Cloud Console, identity, workspaces, and API
+    client credentials. Conforms to OpenAPI 3.0 and authenticates with OAuth 2.0 client
+    credentials that issue short-lived JWT bearer tokens.
   humanURL: https://developer.greenlake.hpe.com
   baseURL: https://global.api.greenlake.hpe.com
   tags:
@@ -182,8 +181,8 @@ apis:
     url: openapi/hpe-identity-api-openapi.yml
 - aid: hpe:hpe-workspaces-api
   name: Hewlett Packard Enterprise Workspaces API
-  description: The Workspaces API from Hewlett Packard Enterprise — 3 operation(s)
-    for workspaces.
+  description: The Workspaces API from Hewlett Packard Enterprise — 3 operation(s) for
+    workspaces.
   humanURL: https://developer.greenlake.hpe.com
   baseURL: https://global.api.greenlake.hpe.com
   tags:
@@ -210,3 +209,9 @@ x-enrichment:
   artifacts_added: 19
   pass: modular-v1
   engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
+
+x-docs-platform: redocly
+
+x-docs-platform-confidence: high
+
+x-docs-platform-checked: 2026-10-03
