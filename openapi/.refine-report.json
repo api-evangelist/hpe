@@ -1,23 +1,21 @@
 {
   "provider": "hpe",
   "sources": [
+    "_original/hpe-morpheus-openapi.yaml",
     "_original/hpe-openapi.yml",
-    "hpe-morpheus-openapi.yaml",
-    "morpheus-openapi.yaml"
+    "_original/morpheus-openapi.yaml"
   ],
   "outputs": [
     "hpe-authorization-api-openapi.yml",
     "hpe-identity-api-openapi.yml",
     "hpe-workspaces-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi/hpe-morpheus-openapi.yaml",
-    "archived openapi/morpheus-openapi.yaml"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
-    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sourced from openapi/_original/ (3 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "hpe-morpheus-openapi.yaml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "hpe-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "hpe-openapi.yml: tagged paths GET /workspaces/v1/credentials -> Workspaces",
     "hpe-openapi.yml: tagged paths POST /workspaces/v1/credentials -> Workspaces",
@@ -42,7 +40,6 @@
     "hpe-openapi.yml: declared missing tag: Authorization",
     "hpe-openapi.yml: declared missing tag: Identity",
     "hpe-openapi.yml: declared missing tag: Workspaces",
-    "hpe-morpheus-openapi.yaml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "morpheus-openapi.yaml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
