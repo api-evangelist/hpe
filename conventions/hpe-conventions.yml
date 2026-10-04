@@ -1,0 +1,21 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developer.greenlake.hpe.com/docs/greenlake/services/compute-ops-mgmt/ahs/guide.md
+sources:
+- https://developer.greenlake.hpe.com/docs/greenlake/services/compute-ops-mgmt/ahs/guide.md
+- https://developer.greenlake.hpe.com/docs/greenlake/services/compute-ops-mgmt/webhooks/guide.md
+- https://developer.greenlake.hpe.com/docs/greenlake/guides/public/authentication/authentication.md
+- https://developer.greenlake.hpe.com/docs/greenlake/services/iam/authorization/oauth2.md
+idempotency:
+  coverage: none
+  evidence: No idempotency mechanism is described in the provided documentation.
+pagination:
+  style: limit/offset via query parameters
+  params:
+  - limit
+  - sort
+  evidence: GET endpoints support a `limit` query parameter and a `sort` parameter as shown in examples.
+versioning: API version is encoded in the URL path (e.g., `/v1beta1/`).
+authentication: 'Bearer token (Authorization: Bearer <JWT>)'
+docs: https://developer.greenlake.hpe.com/docs/greenlake/services/compute-ops-mgmt/ahs/guide.md

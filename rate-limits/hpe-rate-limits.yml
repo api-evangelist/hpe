@@ -1,0 +1,69 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developer.greenlake.hpe.com/docs/greenlake/services/iam/iam-rate-limits.md
+sources:
+- https://developer.greenlake.hpe.com/docs/greenlake/services/iam/iam-rate-limits.md
+- https://developer.greenlake.hpe.com/docs/greenlake/guides/public/rate-limiting/rate-limiting.md
+- https://developer.greenlake.hpe.com/docs/greenlake/services/iam/iam-quotas.md
+name: Hewlett Packard Enterprise rate limits
+limits:
+- name: Add an organization
+  limit_text: 1 request per second
+  max: 1
+  window: second
+  endpoint: POST /organizations/v1alpha1/organizations
+- name: List organizations
+  limit_text: 5 requests per minute
+  max: 5
+  window: minute
+  endpoint: GET /organizations/v1alpha1/organizations
+- name: Retrieve organization by ID
+  limit_text: 100 requests per minute
+  max: 100
+  window: minute
+  endpoint: GET /organizations/v1alpha1/organizations/{orgId}
+- name: Update an organization
+  limit_text: 1 request per second
+  max: 1
+  window: second
+  endpoint: PATCH /organizations/v1alpha1/organizations/{orgId}
+- name: Invite user to organization
+  limit_text: 1 request per second
+  max: 1
+  window: second
+  endpoint: POST /organizations/v1alpha1/users/invite-user
+- name: Returns supported methods (invite user)
+  limit_text: 100 requests per minute
+  max: 100
+  window: minute
+  endpoint: OPTIONS /organizations/v1alpha1/users/invite-user
+- name: Create a workspace linked to an organization
+  limit_text: 1 request per second
+  max: 1
+  window: second
+  endpoint: POST /organizations/v1alpha1/workspaces
+- name: List workspaces
+  limit_text: 5 requests per minute
+  max: 5
+  window: minute
+  endpoint: GET /organizations/v1alpha1/workspaces
+- name: Update a workspace
+  limit_text: 1 request per second
+  max: 1
+  window: second
+  endpoint: PATCH /organizations/v1alpha1/workspaces/{id}
+- name: Get a workspace
+  limit_text: 20 requests per minute
+  max: 20
+  window: minute
+  endpoint: GET /organizations/v1alpha1/workspaces/{id}
+headers:
+- X-RateLimit-Limit
+- X-RateLimit-Remaining
+- X-RateLimit-Reset
+- ratelimit-limit
+- ratelimit-remaining
+- rateLimit-reset
+exhaustion_status: 429
+docs: https://developer.greenlake.hpe.com/docs/greenlake/services/iam/iam-rate-limits.md

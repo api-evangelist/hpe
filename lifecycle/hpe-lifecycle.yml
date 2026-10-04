@@ -1,0 +1,23 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developer.greenlake.hpe.com/docs/greenlake/guides.md
+sources:
+- https://developer.greenlake.hpe.com/docs/greenlake/guides.md
+- https://developer.greenlake.hpe.com/docs/greenlake/guides/public/standards/versioning_basics.md
+- https://developer.greenlake.hpe.com/docs/greenlake/services/authorization/public/changelog.md
+- https://developer.greenlake.hpe.com/docs/greenlake/services/compute-ops-mgmt/jobs/changelog.md
+versioning:
+  how_selected: path
+  docs: 'Generally: `/<api-group>/version/<resource-collection>`; Alpha: `v1alpha1`, Beta: `v1beta1`, Stable: `v1`'
+deprecation:
+  policy: Stable versions provide at least 6 months notice before removal once deprecated; Beta versions give weak 1 month notice unless all usage
+    has been migrated.
+  notice_period: 6 months for stable, 1 month for beta
+  headers:
+  - Deprecation
+  - Sunset
+  - Link
+  docs: Deprecation indicated via 'Deprecation', 'Sunset', 'Link' response headers and OpenAPI 'deprecated' field.
+status_page: null
+docs: https://developer.greenlake.hpe.com/docs/greenlake/guides.md

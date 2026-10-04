@@ -1,5 +1,7 @@
 aid: hpe
+
 name: Hewlett Packard Enterprise
+
 description: >-
   Hewlett Packard Enterprise (HPE) is a global edge-to-cloud technology
   company providing servers, storage, networking, and hybrid cloud
@@ -9,7 +11,9 @@ description: >-
   storage, networking, data services, identity, and workspace management,
   all authenticated via OAuth 2.0 client credentials and bearer tokens
   through a unified global API gateway.
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -22,6 +26,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -35,7 +40,9 @@ accessModel:
   - security
   generated: '2026-09-03'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hpe.png
+
 tags:
   - Cloud
   - Edge to Cloud
@@ -45,6 +52,7 @@ tags:
   - Networking
   - Hybrid Cloud
   - Enterprise IT
+
 tags_raw:
   - Cloud
   - Edge to Cloud
@@ -54,11 +62,69 @@ tags_raw:
   - Networking
   - Hybrid Cloud
   - Enterprise IT
+
 url: >-
   https://raw.githubusercontent.com/api-evangelist/hpe/refs/heads/main/apis.yml
+
 created: '2026-05-11'
+
 modified: '2026-05-11'
+
 specificationVersion: '0.23'
+
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+
+common:
+  - type: RateLimits
+    url: rate-limits/hpe-rate-limits.yml
+  - type: Spectral
+    url: rules/hpe-rules.yml
+  - type: Vocabulary
+    url: vocabulary/hpe-vocabulary.yml
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: ChangeLog
+    url: changelog/hpe-changelog.yml
+  - type: Conventions
+    url: conventions/hpe-conventions.yml
+  - type: Deprecation
+    url: lifecycle/hpe-lifecycle.yml
+  - type: Lifecycle
+    url: lifecycle/hpe-lifecycle.yml
+  - type: Conformance
+    url: conformance/hpe-conformance.yml
+  - type: LLMsTxt
+    url: llms/hpe-llms.txt
+  - type: Hosts
+    url: hosts/hpe-hosts.yml
+  - type: Vendors
+    url: vendors/hpe-vendors.yml
+  - type: GettingStarted
+    url: https://developer.greenlake.hpe.com/docs/greenlake/services/compute-ops-mgmt/ahs/guide
+  - type: CapabilityMap
+    url: capabilities/hpe-capability-edges.yml
+    name: Hewlett Packard Enterprise Business Capability Map
+  - type: AgenticAccess
+    url: agentic-access/hpe-agentic-access.yml
+  - type: DomainSecurity
+    url: security/hpe-domain-security.yml
+  - type: Authentication
+    url: authentication/hpe-authentication.yml
+  - type: GitHubOrganization
+    url: https://github.com/HewlettPackard
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/hewlett-packard-enterprise
+  - type: Website
+    url: https://www.hpe.com
+  - type: Documentation
+    url: https://developer.greenlake.hpe.com
+  - type: DeveloperPortal
+    url: https://developer.hpe.com
+  - type: Signup
+    url: https://common.cloud.hpe.com/sign-up
+
 apis:
 - aid: hpe:greenlake-api
   name: HPE GreenLake API
@@ -125,28 +191,18 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/hpe-workspaces-api-openapi.yml
-common:
-  - type: CapabilityMap
-    url: capabilities/hpe-capability-edges.yml
-    name: Hewlett Packard Enterprise Business Capability Map
-  - type: AgenticAccess
-    url: agentic-access/hpe-agentic-access.yml
-  - type: DomainSecurity
-    url: security/hpe-domain-security.yml
-  - type: Authentication
-    url: authentication/hpe-authentication.yml
-  - type: GitHubOrganization
-    url: https://github.com/HewlettPackard
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/hewlett-packard-enterprise
-  - type: Website
-    url: https://www.hpe.com
-  - type: Documentation
-    url: https://developer.greenlake.hpe.com
-  - type: DeveloperPortal
-    url: https://developer.hpe.com
-  - type: Signup
-    url: https://common.cloud.hpe.com/sign-up
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are rendered via Redocly and the API host returns 403 for OpenAPI endpoints, preventing machine-readable spec retrieval.
+  evidence:
+    - url: https://global.api.greenlake.hpe.com/openapi.json
+      status: 403
+  checked: '2026-10-04'
+x-enrichment:
+  date: '2026-10-04'
+  status: enriched
+  artifacts_added: 19
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

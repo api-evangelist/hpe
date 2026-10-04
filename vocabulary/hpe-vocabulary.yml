@@ -1,0 +1,423 @@
+generated: '2026-10-04'
+method: derived
+generator: derive-vocabulary.py
+source:
+- openapi/hpe-authorization-api-openapi.yml
+- openapi/hpe-identity-api-openapi.yml
+- openapi/hpe-morpheus-openapi.yaml
+- openapi/hpe-workspaces-api-openapi.yml
+- openapi/morpheus-openapi.yaml
+vocabulary:
+  name: Hewlett Packard Enterprise Domain Vocabulary
+  description: 'Terms declared by Hewlett Packard Enterprise''s own API contract: its resource groups, objects and enumerations, with the contract''s
+    definitions. Derived, not authored.'
+  version: '2026-10-04'
+  terms:
+  - term: Administration
+    definition: All Endpoints Under the Administration Tab
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Activity
+    definition: Manage Appliance Activity Logs
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Affinity Groups
+    definition: Provides API interfaces for managing affinity rules and their Host and VM Groups by ID, across both cluster and cloud scope. An
+      affinity rule is either a legacy VM-to-VM rule that lists servers directly, or a combined VM-to-Host rule that references a VM Group and
+      a Host Group.
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Alerts
+    definition: Manage Alerts
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Appliance Settings
+    definition: Manage Appliance Settings
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Approvals
+    definition: Manage Approvals
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Apps
+    definition: Manage Apps
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Archives
+    definition: Archives provides a way to store your files and make them available for download by your Scripts and Users. Archives are organized
+      by buckets. Each bucket has a unique name that is used to identify it in URLs and Scripts.
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Authentication
+    definition: Manage Appliance Authentication
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Automation
+    definition: Manage Tasks and Workflows
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Backup Settings
+    definition: Manage Backup Settings
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Backups
+    definition: Manage Backups
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Billing
+    definition: Manage Billing
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Blueprints
+    definition: Manage Blueprints
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Budgets
+    definition: Manage Budgets
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Catalog Items
+    definition: 'Provides API interfaces for the managing catalog item types. These are the types that become available for order by the Service
+      Catalog persona. This is the adminstrative api for the Library: Catalog Items functionality which was previously located under Tools: Self
+      Service.'
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Checks
+    definition: Manage Monitoring Checks
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Clients
+    definition: Manage Clients
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Clouds
+    definition: Manage Clouds
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Cluster Layouts
+    definition: Manage Cluster Layouts
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Cluster Packages
+    definition: Manage Cluster Packages
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Clusters
+    definition: Manage Kubernetes Clusters
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Contacts
+    definition: Manage Monitoring Contacts
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Containers
+    definition: Manage Containers
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Credentials
+    definition: Manage Credentials
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Cypher
+    definition: Cypher at its core is a secure Key/Value store. But what makes cypher useful is the ability to securely store or generate credentials
+      to connect to your instances. Not only are these credentials encrypted but by using a cypher you don't have to burn in connection credentials
+      between instances into your apps. Cypher keys can be revoked, either through lease timeouts or manually. So even if somebody
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Datastores
+    definition: Manage Storage Datastores
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Deployments
+    definition: Manage File Deployments
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Deploys
+    definition: Manage Deploys
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Documentation
+    definition: View documentation for your [Morpheus Data](https://morpheusdata.com) appliance.
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Email Templates
+    definition: Manage Email Templates
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Environments
+    definition: Manage Environments
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: File Templates
+    definition: Manage File Templates
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Groups
+    definition: Manage Groups
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Guidance
+    definition: Manage Guidance Recommendations
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Guidance Settings
+    definition: Manage Guidance Settings
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Health
+    definition: View Appliance Health Statistics
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: History
+    definition: View History
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Hosts
+    definition: Manage Hosts
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Host Profiles
+    definition: Manage KVM/MVM Host Profiles — capture, compliance, and remediation
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Identity Sources
+    definition: Manage Identity Sources
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Image Builds
+    definition: Manage Image Builds
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Incidents
+    definition: Manage Ticket Incidents
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Infrastructure
+    definition: All Endpoints Under the Infrastructure Tab
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Inputs
+    definition: Manage Inputs (Option Types)
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Instance Types
+    definition: Manage Instance Types
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Instances
+    definition: Manage Instances
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Integrations
+    definition: Manage Integrations
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Invoices
+    definition: Manage Invoices
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Jobs
+    definition: Manage Jobs
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Key Pairs
+    definition: Manage Key Pairs
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Layouts
+    definition: Manage Layouts
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Library
+    definition: All Endpoints Under the Library Tab
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: License
+    definition: Manage Appliance License
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Load Balancers
+    definition: Manage Load Balancers
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Log Settings
+    definition: Manage Log Settings
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Logs
+    definition: View Logs
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Monitoring
+    definition: All Endpoints Under the Monitoring Tab
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Monitoring Settings
+    definition: Manage Monitoring Settings
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Morpheus API
+    definition: All Endpoints Specific to Morpheus API
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Migrations
+    definition: Manage Migrations
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Networks
+    definition: Manage Networks
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Node Types
+    definition: Manage Node/VM Types
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Operations
+    definition: All Endpoints Under the Operations Tab
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Option Lists
+    definition: Manage Option Lists
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Options
+    definition: Manage Options
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Personas
+    definition: All Endpoints Pertaining to Personas
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Ping
+    definition: Ping Appliance
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Plugins
+    definition: Manage Plugins
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Policies
+    definition: Manage Policies
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Price Sets
+    definition: Manage Price Sets
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Prices
+    definition: Manage Prices
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Projects
+    definition: Manage Projects
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Provisioning
+    definition: All Endpoints Under the Provisioning Tab
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Provisioning Settings
+    definition: Manage Provisioning Settings
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Provisioning Licenses
+    definition: Provides API interfaces for managing provisioning licenses within Morpheus. This allows configuration of which Windows license
+      keys should be installed when provisioning your virtual images.
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Reports
+    definition: Manage Reports
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Resource Pools
+    definition: Manage Resource Pools
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Roles
+    definition: Manage Roles (Authorities)
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml
+  - term: Scripts
+    definition: Manage Scripts
+    tags:
+    - Resource Group
+    source: openapi/hpe-morpheus-openapi.yaml

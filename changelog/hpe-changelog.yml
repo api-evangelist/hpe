@@ -1,0 +1,80 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developer.greenlake.hpe.com/docs/greenlake/guides.md
+sources:
+- https://developer.greenlake.hpe.com/docs/greenlake/guides.md
+- https://developer.greenlake.hpe.com/docs/greenlake/guides/public/standards/versioning_basics.md
+- https://developer.greenlake.hpe.com/docs/greenlake/services/authorization/public/changelog.md
+- https://developer.greenlake.hpe.com/docs/greenlake/services/compute-ops-mgmt/jobs/changelog.md
+entries:
+- breaking: false
+  highlights:
+  - 'The following job definitions were added:'
+  - Server Enable Maintenance Mode
+  - Server Disable Maintenance Mode
+  - These jobs control enabling maintenance mode on selected servers to suspend automatic support case creation, ServiceNow incident creation,
+    and email notifications during planned maintenance.
+  date: '2026-06-01'
+- breaking: false
+  highlights:
+  - Better describe and fix typos on `/authorization/v1beta1/scope-groups` APIs
+  - Better describe and fix typos on `/authorization/v1beta1/role-assignments` APIs
+  date: '2026-02-10'
+- breaking: false
+  highlights:
+  - 'The following job definitions were added:'
+  - vCenter Firmware Bundles Sync
+  - Delete vCenter
+  - These jobs manage VMware vCenter external service integrations for firmware bundle synchronization and service deletion.
+  date: '2026-02-05'
+- breaking: false
+  highlights:
+  - 'The following job definitions were added:'
+  - Server UID Indicator On
+  - Server UID Indicator Off
+  - These jobs control the UID (Unit Identification) indicator light on servers to help physically identify specific servers in a data center.
+  date: '2025-12-05'
+- breaking: false
+  highlights:
+  - The initial release of the Workspace Groups Management API.
+  - POST /workspaces/v1beta1/groups — Create new workspace groups
+  - GET /workspaces/v1beta1/groups — Retrieve existing groups in a workspace
+  date: '2025-11-12'
+- breaking: false
+  highlights:
+  - Initial release of the HPE GreenLake Authorization API v1beta1
+  - 'Role assignment management endpoints:'
+  - POST /authorization/v1beta1/role-assignments — Create a role assignment
+  date: '2025-11-07'
+- breaking: false
+  highlights:
+  - 'The following job definitions were added:'
+  - Server firmware download
+  - Group firmware download
+  date: '2025-10-16'
+- breaking: false
+  highlights:
+  - Updated internal storage job definitions.
+  date: '2025-08-12'
+- breaking: false
+  highlights:
+  - '`Carbon Footprint Report` job template with ID `b0001d36-6490-48ac-93af-a87adfb997ed` is removed.'
+  - Use Compute Ops Management Create report API for report creation.
+  date: '2025-07-14'
+- breaking: false
+  highlights:
+  - Job Definition documentation updated to match the V1 API version.
+  date: '2025-04-17'
+- breaking: false
+  highlights:
+  - Added a section on migrating to the stable `v1` API.
+  - Included an example of monitoring a job using the `v1` API.
+  date: '2025-04-16'
+- breaking: false
+  highlights:
+  - 'The following job definitions were added:'
+  - Group Appliance Update
+  date: '2025-02-06'
+note: 'Versioning scheme described in GreenLake cloud API Versioning Basics: Alpha (v1alphaX), Beta (vXbetaY), Stable (vX).'
+docs: https://developer.greenlake.hpe.com/docs/greenlake/guides.md

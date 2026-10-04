@@ -1,0 +1,117 @@
+generated: '2026-10-04'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/hpe-authorization-api-openapi.yml
+- openapi/hpe-identity-api-openapi.yml
+- openapi/hpe-workspaces-api-openapi.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.hpe.com, global.api.greenlake.hpe.com, developer.greenlake.hpe.com,
+  developer.hpe.com; verdict gated (https://developer.greenlake.hpe.com/mcp answered 401: the edge authenticates before it routes, which proves
+  nothing either way). Candidate tools below are derived from the 20 operation(s) in the provider''s own OpenAPI (20 listed); they describe what
+  a server WOULD expose, not one that exists.'
+tools:
+- name: create_scope_group
+  operationId: createScopeGroup
+  method: POST
+  path: /authorization/v1beta1/scope-groups
+  description: Create a scope group
+- name: list_users
+  operationId: listUsers
+  method: GET
+  path: /identity/v1/users
+  description: List users in the workspace
+- name: list_credentials
+  operationId: listCredentials
+  method: GET
+  path: /workspaces/v1/credentials
+  description: List API client credentials
+- name: get_scope_group
+  operationId: getScopeGroup
+  method: GET
+  path: /authorization/v1beta1/scope-groups/{scope-group-id}
+  description: Retrieve a scope group
+- name: invite_user
+  operationId: inviteUser
+  method: POST
+  path: /identity/v1/users
+  description: Invite a user to the workspace
+- name: create_credential
+  operationId: createCredential
+  method: POST
+  path: /workspaces/v1/credentials
+  description: Create an API client credential
+- name: update_scope_group
+  operationId: updateScopeGroup
+  method: PUT
+  path: /authorization/v1beta1/scope-groups/{scope-group-id}
+  description: Update a scope group
+- name: get_user
+  operationId: getUser
+  method: GET
+  path: /identity/v1/users/{id}
+  description: Get a specific user
+- name: delete_credential
+  operationId: deleteCredential
+  method: DELETE
+  path: /workspaces/v1/credentials/{id}
+  description: Delete an API client credential
+- name: delete_scope_group
+  operationId: deleteScopeGroup
+  method: DELETE
+  path: /authorization/v1beta1/scope-groups/{scope-group-id}
+  description: Delete a scope group
+- name: update_user
+  operationId: updateUser
+  method: PUT
+  path: /identity/v1/users/{id}
+  description: Update user preferences
+- name: reset_credential
+  operationId: resetCredential
+  method: POST
+  path: /workspaces/v1/credentials/{id}/reset
+  description: Reset (regenerate) a credential's clientSecret
+- name: list_scopes
+  operationId: listScopes
+  method: GET
+  path: /authorization/v1beta1/scope-groups/{scope-group-id}/scopes
+  description: List scopes in a scope group
+- name: delete_user
+  operationId: deleteUser
+  method: DELETE
+  path: /identity/v1/users/{id}
+  description: Delete a user from the workspace
+- name: add_scopes_batch
+  operationId: addScopesBatch
+  method: POST
+  path: /authorization/v1beta1/scope-groups/{scope-group-id}/scopes/batch
+  description: Add resources to a scope group
+- name: remove_scopes_bulk
+  operationId: removeScopesBulk
+  method: DELETE
+  path: /authorization/v1beta1/scope-groups/{scope-group-id}/scopes/bulk
+  description: Remove multiple scopes from a scope group
+- name: create_role_assignment
+  operationId: createRoleAssignment
+  method: POST
+  path: /authorization/v1beta1/role-assignments
+  description: Create a role assignment
+- name: get_role_assignment
+  operationId: getRoleAssignment
+  method: GET
+  path: /authorization/v1beta1/role-assignments/{id}
+  description: Retrieve a role assignment
+- name: update_role_assignment
+  operationId: updateRoleAssignment
+  method: PUT
+  path: /authorization/v1beta1/role-assignments/{id}
+  description: Update a role assignment
+- name: delete_role_assignment
+  operationId: deleteRoleAssignment
+  method: DELETE
+  path: /authorization/v1beta1/role-assignments/{id}
+  description: Delete a role assignment

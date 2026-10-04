@@ -1,0 +1,6 @@
+generated: '2026-10-04'
+method: probed
+generator: harvest-llms.py
+source: https://developer.greenlake.hpe.com/llms.txt
+bytes: 45047
+note: saved verbatim; the provider's own document

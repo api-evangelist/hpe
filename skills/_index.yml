@@ -1,0 +1,26 @@
+generated: '2026-10-04'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/hpe-authorization-api-openapi.yml
+skills:
+- file: skills/hpe-create-scope-group-with-scopes.md
+  name: hpe-create-scope-group-with-scopes
+  api: openapi/hpe-authorization-api-openapi.yml
+  operations:
+  - createScopeGroup
+  - addScopesBatch
+  - listScopes
+- file: skills/hpe-invite-and-verify-user.md
+  name: hpe-invite-and-verify-user
+  api: openapi/hpe-identity-api-openapi.yml
+  operations:
+  - inviteUser
+  - getUser
+- file: skills/hpe-workspaces-manage-credentials.md
+  name: hpe-workspaces-manage-credentials
+  api: openapi/hpe-workspaces-api-openapi.yml
+  operations:
+  - createCredential
+  - listCredentials
+  - resetCredential
+  - deleteCredential
