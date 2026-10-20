@@ -2,17 +2,252 @@ generated: '2026-10-14'
 method: searched
 checked:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
+- https://azuremarketplace.microsoft.com/
 - https://focus.finops.org/data-generators/
 - https://github.com/cncf/k8s-conformance
 - https://github.com/cncf/landscape
 - https://github.com/kubeflow/website
 - https://github.com/lfai/landscape
 - https://github.com/mlcommons
+- ping-identity/integrations/ping-identity-integration-edges.yml
 - splunk/integrations/splunk-integration-edges.yml
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
 - splunk/integrations/splunk-integration-edges.yml
 edges:
+- partner_name: MLCommons MLPerf
+  partner: mlcommons
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: ML benchmark results
+  evidence: https://github.com/mlcommons/inference_results_v6.1/tree/main/closed/HPE
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: MLCommons MLPerf results (github.com/mlcommons/<family>_results_v<round>, closed/ + open/ submitter
+      directories)
+    spec_file: null
+    standard: MLPerf (MLCommons)
+    role: mlperf-submitter
+    registered_name: Hewlett Packard Enterprise
+    register_directories:
+    - HPE
+    matched_domain: hpe.com
+    matched_by: domain+verified
+    identity_source: wikidata Q19923099 'Hewlett Packard Enterprise' P856 https://www.hpe.com/
+    identity_note: 'MLPerf publishes names only: domain from Wikidata P856 (labelled lookup, Kin 2026-10-15 decision
+      1), then partner_link (domain + name check)'
+    certified_products:
+    - product: MLPerf Hpc (closed division)
+      newest_round: v3.0
+      lapsed: false
+    - product: MLPerf Inference (closed division)
+      newest_round: v6.1
+      lapsed: false
+    - product: MLPerf Storage (closed division)
+      newest_round: v3.0
+      lapsed: false
+    - product: MLPerf Training (closed division)
+      newest_round: v6.0
+      lapsed: false
+    open_division_only: []
+    current_window: each family's newest 2 rounds
+    signal_note: certified_products = one entry per benchmark FAMILY with a closed-division (peer-reviewed, reference-rules)
+      result, lapsed outside the current window; open-division families, rounds and result counts are context, never
+      read
+    detected_by: sweep-mlops.py
+    detected: '2026-10-19'
+  detected_by: sweep-mlops.py
+  first_seen: '2026-10-15'
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: distribution-channel
+  direction: third-party
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Hewlett%20Packard%20Enterprise
+  listing_count: 3
+  apps:
+  - HPE OneView for Azure Log Analytics (v1.4.0)
+  - HPE StoreOnce VSA 4.3.11
+  - HPE StoreOnce VSA 3.18.7
+  seller_name: Hewlett Packard Enterprise
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-19'
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: distribution-channel
+  direction: third-party
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Hewlett%20Packard%20Enterprise
+  listing_count: 5
+  apps:
+  - HPE NonStop Development Environment (HPE NSDevEnv)
+  - Aruba ClearPass Policy Manager (CPPM) 6.12
+  - Aruba ClearPass Policy Manager (CPPM) 6.14
+  - HPE OpsRamp Software
+  - HPE Morpheus Enterprise
+  seller_name: Hewlett Packard Enterprise
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-19'
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: distribution-channel
+  direction: third-party
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Hewlett%20Packard%20Enterprise
+  listing_count: 1
+  apps:
+  - HPE Serviceguard for Linux (SGLX)
+  seller_name: Hewlett Packard Enterprise
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-19'
+- partner_name: CNCF (Cloud Native Landscape)
+  partner: cncf
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: Cloud native landscape
+  evidence: https://github.com/cncf/landscape/blob/42dd4cd91dad8ec8558ac02467a43f0805b9957a/landscape.yml
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: CNCF Cloud Native Landscape (github.com/cncf/landscape landscape.yml @42dd4cd91d)
+    spec_file: null
+    standard: Cloud Native (CNCF)
+    role: cncf-member (Silver)
+    registered_name: HPE
+    registered_names:
+    - HPE
+    - HPE (KCNTP)
+    - HPE Enterprise Kubernetes Platform (HKS)
+    - HPE Ezmeral Runtime Enterprise
+    - HPE Storage
+    website: https://www.hpe.com/us/en/home.html
+    matched_domain: hpe.com
+    matched_by: domain+name-among-holders
+    member_tier: Silver
+    joined: '2017-10-01'
+    end_user: false
+    cncf_projects: []
+    landscape_categories:
+    - Platform / Certified Kubernetes - Distribution
+    - Runtime / Cloud Native Storage
+    - Special / Kubernetes and Cloud Native Training Partner
+    landscape_entries: 4
+    signal_note: 'participation only: a landscape listing is standard-participant evidence, not depth. Entries,
+      categories, tier and projects are CONTEXT, never read (breadth is not credit)'
+    detected_by: sweep-cloud-native.py
+    detected: '2026-10-19'
+  detected_by: sweep-cloud-native.py
+  first_seen: '2026-10-15'
+- partner_name: CNCF (Kubernetes Certified Service Provider)
+  partner: cncf
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: Kubernetes services
+  evidence: https://landscape.cncf.io/?group=special&view-mode=grid
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: CNCF Kubernetes Certified Service Provider (github.com/cncf/landscape landscape.yml Special / Kubernetes
+      Certified Service Provider @42dd4cd91d)
+    spec_file: null
+    standard: Kubernetes (KCSP)
+    role: kcsp
+    registered_name: HPE
+    website: https://www.hpe.com/us/en/services/consulting/cloud.html
+    matched_domain: hpe.com
+    matched_by: domain+name-among-holders
+    certified_products:
+    - product: Kubernetes Certified Service Provider
+      lapsed: false
+    signal_note: certified_products = ONE entry (the KCSP vetting itself), never a count
+    detected_by: sweep-cloud-native.py
+    detected: '2026-10-19'
+  detected_by: sweep-cloud-native.py
+  first_seen: '2026-10-15'
+- partner_name: CNCF Certified Kubernetes
+  partner: cncf
+  partner_match: register
+  type: register
+  direction: partner-built
+  evidence: https://github.com/cncf/k8s-conformance/tree/621a55d41c23eab137118626e941b72fb8d32f89/v1.35/hpe-ere
+  category: Certified Kubernetes
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: CNCF Certified Kubernetes (github.com/cncf/k8s-conformance @621a55d41c)
+    spec_file: null
+    standard: Kubernetes conformance
+    role: certified-kubernetes
+    registered_name: Hewlett Packard Enterprise (HPE)
+    website: https://www.hpe.com/us/en/solutions/cloud/containers.html
+    matched_domain: hpe.com
+    matched_by: domain+name-among-holders
+    certified_products:
+    - product: distribution
+      newest_version: v1.35
+      lapsed: false
+    versions_certified:
+    - v1.24
+    - v1.25
+    - v1.26
+    - v1.28
+    - v1.29
+    - v1.30
+    - v1.31
+    - v1.32
+    - v1.33
+    - v1.34
+    - v1.35
+    products:
+    - HPE Ezmeral Runtime Enterprise
+    - HPE’s enterprise Kubernetes platform (HKS)
+    current_window: v1.34+ (newest 4 minors in the register)
+    signal_note: certified_products = one entry per product TYPE (distribution/hosted/installer), lapsed when its
+      newest certified minor is outside the current window; products and versions are context, never read
+    detected_by: sweep-cloud-native.py
+    detected: '2026-10-19'
+  detected_by: sweep-cloud-native.py
+  first_seen: '2026-10-15'
+- partner_name: CNCF Certified Kubernetes
+  partner: cncf
+  partner_match: register
+  type: register
+  direction: partner-built
+  evidence: https://github.com/cncf/k8s-conformance/tree/621a55d41c23eab137118626e941b72fb8d32f89/v1.35/hpe-ere
+  category: Certified Kubernetes
+  channel: standard-directory
+  relationship: compatible
+  shape: kubernetes-api
+  evidence_kind: conformance-register
+  degree: certified
+  report_only: true
+  note: the Kubernetes conformance suite was run against this product and the result merged into the CNCF register
+    (anchor kubernetes)
+  contract_reference:
+    register: CNCF Certified Kubernetes (github.com/cncf/k8s-conformance @621a55d41c)
+    spec_file: null
+    standard: Kubernetes API
+    role: kubernetes-conformance
+    registered_name: Hewlett Packard Enterprise (HPE)
+    matched_domain: hpe.com
+    newest_version: v1.35
+    detected_by: sweep-cloud-native.py
+    detected: '2026-10-19'
+  detected_by: sweep-cloud-native.py
+  first_seen: '2026-10-15'
 - partner_name: CrowdStrike (own)
   partner: crowdstrike
   partner_match: mirror
@@ -159,6 +394,22 @@ edges:
   listing_count: 3
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
+- partner_name: Ping Identity (own)
+  partner: ping-identity
+  partner_match: mirror
+  mirror_match: domain+verified
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.pingone.com/item/atmos-sso-user-provisioning-integration
+  mirror_of: ping-identity/integrations/ping-identity-integration-edges.yml
+  apps:
+  - Atmos SSO & User Provisioning Integration
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
 - partner_name: Splunk (own)
   partner: splunk
   partner_match: mirror
@@ -176,185 +427,4 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: app
-- partner_name: CNCF (Cloud Native Landscape)
-  partner: cncf
-  partner_match: register
-  type: register
-  direction: partner-built
-  category: Cloud native landscape
-  evidence: https://github.com/cncf/landscape/blob/3a7d378b1824b82e729a453bb03fa6f1e37557e1/landscape.yml
-  channel: standard-directory
-  relationship: standard-participant
-  contract_reference:
-    register: CNCF Cloud Native Landscape (github.com/cncf/landscape landscape.yml @3a7d378b18)
-    spec_file: null
-    standard: Cloud Native (CNCF)
-    role: cncf-member (Silver)
-    registered_name: HPE
-    registered_names:
-    - HPE
-    - HPE (KCNTP)
-    - HPE Enterprise Kubernetes Platform (HKS)
-    - HPE Ezmeral Runtime Enterprise
-    - HPE Storage
-    website: https://www.hpe.com/us/en/home.html
-    matched_domain: hpe.com
-    matched_by: domain+name-among-holders
-    member_tier: Silver
-    joined: '2017-10-01'
-    end_user: false
-    cncf_projects: []
-    landscape_categories:
-    - Platform / Certified Kubernetes - Distribution
-    - Runtime / Cloud Native Storage
-    - Special / Kubernetes and Cloud Native Training Partner
-    landscape_entries: 4
-    signal_note: 'participation only: a landscape listing is standard-participant evidence, not depth. Entries,
-      categories, tier and projects are CONTEXT, never read (breadth is not credit)'
-    detected_by: sweep-cloud-native.py
-    detected: '2026-10-15'
-  detected_by: sweep-cloud-native.py
-  first_seen: '2026-10-15'
-- partner_name: CNCF (Kubernetes Certified Service Provider)
-  partner: cncf
-  partner_match: register
-  type: register
-  direction: partner-built
-  category: Kubernetes services
-  evidence: https://landscape.cncf.io/?group=special&view-mode=grid
-  channel: standard-directory
-  relationship: standard-participant
-  contract_reference:
-    register: CNCF Kubernetes Certified Service Provider (github.com/cncf/landscape landscape.yml Special / Kubernetes
-      Certified Service Provider @3a7d378b18)
-    spec_file: null
-    standard: Kubernetes (KCSP)
-    role: kcsp
-    registered_name: HPE
-    website: https://www.hpe.com/us/en/services/consulting/cloud.html
-    matched_domain: hpe.com
-    matched_by: domain+name-among-holders
-    certified_products:
-    - product: Kubernetes Certified Service Provider
-      lapsed: false
-    signal_note: certified_products = ONE entry (the KCSP vetting itself), never a count
-    detected_by: sweep-cloud-native.py
-    detected: '2026-10-15'
-  detected_by: sweep-cloud-native.py
-  first_seen: '2026-10-15'
-- partner_name: CNCF Certified Kubernetes
-  partner: cncf
-  partner_match: register
-  type: register
-  direction: partner-built
-  evidence: https://github.com/cncf/k8s-conformance/tree/85d26a419e7df96137e66817b61cb22a616ce1e9/v1.35/hpe-ere
-  category: Certified Kubernetes
-  channel: standard-directory
-  relationship: standard-participant
-  contract_reference:
-    register: CNCF Certified Kubernetes (github.com/cncf/k8s-conformance @85d26a419e)
-    spec_file: null
-    standard: Kubernetes conformance
-    role: certified-kubernetes
-    registered_name: Hewlett Packard Enterprise (HPE)
-    website: https://www.hpe.com/us/en/solutions/cloud/containers.html
-    matched_domain: hpe.com
-    matched_by: domain+name-among-holders
-    certified_products:
-    - product: distribution
-      newest_version: v1.35
-      lapsed: false
-    versions_certified:
-    - v1.24
-    - v1.25
-    - v1.26
-    - v1.28
-    - v1.29
-    - v1.30
-    - v1.31
-    - v1.32
-    - v1.33
-    - v1.34
-    - v1.35
-    products:
-    - HPE Ezmeral Runtime Enterprise
-    - HPE’s enterprise Kubernetes platform (HKS)
-    current_window: v1.34+ (newest 4 minors in the register)
-    signal_note: certified_products = one entry per product TYPE (distribution/hosted/installer), lapsed when its
-      newest certified minor is outside the current window; products and versions are context, never read
-    detected_by: sweep-cloud-native.py
-    detected: '2026-10-15'
-  detected_by: sweep-cloud-native.py
-  first_seen: '2026-10-15'
-- partner_name: CNCF Certified Kubernetes
-  partner: cncf
-  partner_match: register
-  type: register
-  direction: partner-built
-  evidence: https://github.com/cncf/k8s-conformance/tree/85d26a419e7df96137e66817b61cb22a616ce1e9/v1.35/hpe-ere
-  category: Certified Kubernetes
-  channel: standard-directory
-  relationship: compatible
-  shape: kubernetes-api
-  evidence_kind: conformance-register
-  degree: certified
-  report_only: true
-  note: the Kubernetes conformance suite was run against this product and the result merged into the CNCF register
-    (anchor kubernetes)
-  contract_reference:
-    register: CNCF Certified Kubernetes (github.com/cncf/k8s-conformance @85d26a419e)
-    spec_file: null
-    standard: Kubernetes API
-    role: kubernetes-conformance
-    registered_name: Hewlett Packard Enterprise (HPE)
-    matched_domain: hpe.com
-    newest_version: v1.35
-    detected_by: sweep-cloud-native.py
-    detected: '2026-10-15'
-  detected_by: sweep-cloud-native.py
-  first_seen: '2026-10-15'
-- partner_name: MLCommons MLPerf
-  partner: mlcommons
-  partner_match: register
-  type: register
-  direction: partner-built
-  category: ML benchmark results
-  evidence: https://github.com/mlcommons/inference_results_v6.1/tree/main/closed/HPE
-  channel: standard-directory
-  relationship: standard-participant
-  contract_reference:
-    register: MLCommons MLPerf results (github.com/mlcommons/<family>_results_v<round>, closed/ + open/ submitter
-      directories)
-    spec_file: null
-    standard: MLPerf (MLCommons)
-    role: mlperf-submitter
-    registered_name: Hewlett Packard Enterprise
-    register_directories:
-    - HPE
-    matched_domain: hpe.com
-    matched_by: domain+verified
-    identity_source: wikidata Q19923099 'Hewlett Packard Enterprise' P856 https://www.hpe.com/
-    identity_note: 'MLPerf publishes names only: domain from Wikidata P856 (labelled lookup, Kin 2026-10-15 decision
-      1), then partner_link (domain + name check)'
-    certified_products:
-    - product: MLPerf Hpc (closed division)
-      newest_round: v3.0
-      lapsed: false
-    - product: MLPerf Inference (closed division)
-      newest_round: v6.1
-      lapsed: false
-    - product: MLPerf Storage (closed division)
-      newest_round: v3.0
-      lapsed: false
-    - product: MLPerf Training (closed division)
-      newest_round: v6.0
-      lapsed: false
-    open_division_only: []
-    current_window: each family's newest 2 rounds
-    signal_note: certified_products = one entry per benchmark FAMILY with a closed-division (peer-reviewed, reference-rules)
-      result, lapsed outside the current window; open-division families, rounds and result counts are context, never
-      read
-    detected_by: sweep-mlops.py
-    detected: '2026-10-15'
-  detected_by: sweep-mlops.py
-  first_seen: '2026-10-15'
+marketplace_apps: []
