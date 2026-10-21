@@ -174,6 +174,40 @@
     detected: '2026-10-19'
   status: not-a-workflow
   arazzo: null
+- slug: hpe-cloud-security-alliance-star-registry
+  label: Cloud Security Alliance STAR Registry
+  partner_name: Cloud Security Alliance STAR Registry
+  category: Cloud security assurance
+  type: register
+  channel: standard-directory
+  evidence: https://cloudsecurityalliance.org/star/registry/hewlett-packard-enterprise/services/hpe-aruba-networking-central
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
+    spec_file: null
+    standard: CSA STAR
+    role: star-level-2
+    registered_name: Hewlett-Packard Enterprise
+    registry_id: hewlett-packard-enterprise
+    service_url: https://www.hpe.com/us/en/aruba-central.html
+    matched_domain: hpe.com
+    matched_by: domain+verified
+    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
+    levels:
+    - STAR Level 1
+    - STAR Level 2
+    certified_products:
+    - product: STAR Attestation
+      lapsed: true
+      latest: '2025-07-14'
+    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
+      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
+      = every instance marked (Deprecated) by the registry; service counts never recorded
+    detected_by: sweep-compliance-assurance.py
+    detected: '2026-10-20'
+  status: not-a-workflow
+  arazzo: null
 - slug: hpe-crowdstrike-own
   label: CrowdStrike (own)
   partner: crowdstrike
@@ -211,37 +245,42 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
-- slug: hpe-cloud-security-alliance-star-registry
-  label: Cloud Security Alliance STAR Registry
-  partner_name: Cloud Security Alliance STAR Registry
-  category: Cloud security assurance
-  type: register
-  channel: standard-directory
-  evidence: https://cloudsecurityalliance.org/star/registry/hewlett-packard-enterprise/services/hpe-aruba-networking-central
+- slug: hpe-opentofu-opentofu-registry
+  label: OpenTofu (opentofu-registry)
+  partner: opentofu
+  partner_name: OpenTofu (opentofu-registry)
+  category: infrastructure-as-code provider registry listing
+  type: marketplace
+  marketplace: opentofu-registry
+  channel: partner-built
+  evidence: https://search.opentofu.org/provider/hpe/hpe
   source: edge
-  relationship: standard-participant
-  contract_reference:
-    register: CSA STAR Registry (cloudsecurityalliance.org/star/registry)
-    spec_file: null
-    standard: CSA STAR
-    role: star-level-2
-    registered_name: Hewlett-Packard Enterprise
-    registry_id: hewlett-packard-enterprise
-    service_url: https://www.hpe.com/us/en/aruba-central.html
-    matched_domain: hpe.com
-    matched_by: domain+verified
-    identity_source: the service URL the organisation filed on its STAR listing (no lookup)
-    levels:
-    - STAR Level 1
-    - STAR Level 2
-    certified_products:
-    - product: STAR Attestation
-      lapsed: true
-      latest: '2025-07-14'
-    signal_note: STAR Level 1 (CAIQ self-assessment) = participation; certified_products = one entry per STAR Level
-      2 / STAR for AI Level 2 assessment TYPE (third-party certification, attestation, C-STAR, ValidAIted); lapsed
-      = every instance marked (Deprecated) by the registry; service counts never recorded
-    detected_by: sweep-compliance-assurance.py
-    detected: '2026-10-20'
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: hpe-pulumi-pulumi-registry
+  label: Pulumi (pulumi-registry)
+  partner: pulumi
+  partner_name: Pulumi (pulumi-registry)
+  category: infrastructure-as-code provider registry listing
+  type: marketplace
+  marketplace: pulumi-registry
+  channel: partner-built
+  evidence: https://www.pulumi.com/registry/packages/hpegl/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: hpe-terraform-terraform-registry
+  label: Terraform (terraform-registry)
+  partner: terraform
+  partner_name: Terraform (terraform-registry)
+  category: infrastructure-as-code provider registry listing
+  type: marketplace
+  marketplace: terraform-registry
+  channel: partner-built
+  evidence: https://registry.terraform.io/providers/HPE/hpegl
+  source: edge
+  relationship: platform-app
   status: not-a-workflow
   arazzo: null
