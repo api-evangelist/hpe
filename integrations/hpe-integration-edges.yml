@@ -16,6 +16,17 @@ checked:
 - opentofu/integrations/opentofu-integration-edges.yml
 - pulumi/integrations/pulumi-integration-edges.yml
 - terraform/integrations/terraform-integration-edges.yml
+- https://uptimeinstitute.com/uptime-institute-awards/list
+- https://www.climateneutraldatacentre.net/signatories/
+- https://www.opencompute.org/membership/membership-directory
+- https://www.thegreengrid.org/en/about-us/members
+- https://riscv.landscape2.io/data/full.json
+- https://riscv.org/members/
+- https://www.nist.gov/chips/chips-program-office-awards
+- https://www.nist.gov/chips/chips-rd-office-awards
+- https://www.opencompute.org/products
+- https://www.opencompute.org/wp-json/wp/v2/companies
+- https://www.opencompute.org/wp-json/wp/v2/marketplace
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
 - splunk/integrations/splunk-integration-edges.yml
@@ -523,4 +534,58 @@ edges:
   category: infrastructure-as-code provider registry listing
   badges:
   - Verified publisher (Terraform partner tier)
+- partner_name: The Green Grid
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.thegreengrid.org/en/about-us/members
+  category: data center efficiency consortium membership
+  contract_reference:
+    register: The Green Grid members, Executive Leadership Council (thegreengrid.org/en/about-us/members)
+    standard: The Green Grid data-center efficiency metrics (PUE / WUE / CUE)
+    spec_file: null
+    role: green-grid-member
+    registered_name: Hewlett-Packard Enterprise
+    register_id: https://www.hpe.com
+    matched_domain: hpe.com
+    matched_by: domain+verified
+    signal_note: 'participation only: member of The Green Grid''s Executive Leadership Council (public logo wall;
+      the full roster is behind the member login and was not entered)'
+    detected_by: sweep-data-center-tier-certification.py
+    detected: '2026-10-21'
+  detected_by: sweep-data-center-tier-certification.py
+  first_seen: '2026-10-21'
+- partner_name: Open Compute Project marketplace
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.opencompute.org/marketplace/experience-centers-validation/ocp-experience-center-houston-usa-open-systems-firmware-hosted-hpe/
+  category: data-center hardware marketplace listing
+  contract_reference:
+    register: Open Compute Project marketplace (opencompute.org/products; /wp-json/wp/v2/marketplace + /companies)
+    standard: Open Compute Project
+    spec_file: null
+    role: ocp-marketplace-listing
+    registered_name: HPE
+    register_id: https://www.opencompute.org/members/hpe/
+    matched_domain: hpe.com
+    matched_by: domain+name-among-holders
+    listings: 2
+    recognised_listings: 0
+    products_sample:
+    - OCP Experience Center (Houston, USA) – Open Systems Firmware – Hosted HPE
+    - OCP Experience Center (Paris, France) – Open Systems Firmware – Hosted by Scaleway & HPE
+    signal_note: certified_products = one entry per product type (OCP recognition + most specific marketplace segment)
+      among OCP-recognised listings; unrecognised listings are listing alone (participation). The REST data marks
+      no listing archived, so lapsed is false. Listing counts are context, never counted
+    detected_by: sweep-semiconductor-consortia.py
+    detected: '2026-10-21'
+  detected_by: sweep-semiconductor-consortia.py
+  first_seen: '2026-10-21'
 marketplace_apps: []

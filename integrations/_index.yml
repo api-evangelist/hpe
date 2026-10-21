@@ -284,3 +284,57 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: hpe-the-green-grid
+  label: The Green Grid
+  partner_name: The Green Grid
+  category: data center efficiency consortium membership
+  type: register
+  channel: standard-directory
+  evidence: https://www.thegreengrid.org/en/about-us/members
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: The Green Grid members, Executive Leadership Council (thegreengrid.org/en/about-us/members)
+    standard: The Green Grid data-center efficiency metrics (PUE / WUE / CUE)
+    spec_file: null
+    role: green-grid-member
+    registered_name: Hewlett-Packard Enterprise
+    register_id: https://www.hpe.com
+    matched_domain: hpe.com
+    matched_by: domain+verified
+    signal_note: 'participation only: member of The Green Grid''s Executive Leadership Council (public logo wall;
+      the full roster is behind the member login and was not entered)'
+    detected_by: sweep-data-center-tier-certification.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
+- slug: hpe-open-compute-project-marketplace
+  label: Open Compute Project marketplace
+  partner_name: Open Compute Project marketplace
+  category: data-center hardware marketplace listing
+  type: register
+  channel: standard-directory
+  evidence: https://www.opencompute.org/marketplace/experience-centers-validation/ocp-experience-center-houston-usa-open-systems-firmware-hosted-hpe/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Open Compute Project marketplace (opencompute.org/products; /wp-json/wp/v2/marketplace + /companies)
+    standard: Open Compute Project
+    spec_file: null
+    role: ocp-marketplace-listing
+    registered_name: HPE
+    register_id: https://www.opencompute.org/members/hpe/
+    matched_domain: hpe.com
+    matched_by: domain+name-among-holders
+    listings: 2
+    recognised_listings: 0
+    products_sample:
+    - OCP Experience Center (Houston, USA) – Open Systems Firmware – Hosted HPE
+    - OCP Experience Center (Paris, France) – Open Systems Firmware – Hosted by Scaleway & HPE
+    signal_note: certified_products = one entry per product type (OCP recognition + most specific marketplace segment)
+      among OCP-recognised listings; unrecognised listings are listing alone (participation). The REST data marks
+      no listing archived, so lapsed is false. Listing counts are context, never counted
+    detected_by: sweep-semiconductor-consortia.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
