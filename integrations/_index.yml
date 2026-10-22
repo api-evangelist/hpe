@@ -650,3 +650,138 @@
     detected: '2026-10-22'
   status: not-a-workflow
   arazzo: null
+- slug: hpe-red-hat-ecosystem-catalog-certified-partners
+  label: Red Hat Ecosystem Catalog (certified partners)
+  partner: red-hat
+  partner_name: Red Hat Ecosystem Catalog (certified partners)
+  category: Red Hat OpenShift / RHEL software certification
+  type: register
+  channel: standard-directory
+  evidence: https://catalog.redhat.com/software/containers/search?p=1&vendor_name=Hewlett%20Packard%20Enterprise%20Company
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: 'Red Hat Ecosystem Catalog (catalog.redhat.com/api/containers/v1: repositories, vendors, certified
+      operator bundles)'
+    standard: Red Hat Container Certification (Red Hat Ecosystem Catalog, registry.connect.redhat.com)
+    spec_file: null
+    role: red-hat-certified-partner
+    registered_name: Hewlett Packard Enterprise Company
+    register_id: hpe3parcinder
+    matched_domain: hpe.com
+    matched_by: domain+verified
+    identity_source: the register's own company_url for the vendor (no lookup)
+    certified_products:
+    - product: Red Hat certified container image
+      product_type: container-image
+      standard: Red Hat Container Certification (Red Hat Ecosystem Catalog, registry.connect.redhat.com)
+      lapsed: false
+      repositories_listed: 6
+      products_sample:
+      - hpe3parcinder/hpe3parcinder
+      - hpe3parcinder/hpe3parcinder16
+      - hpe3parcinder/openstack-cinder-volume-hpe3parcinder16-1
+      - hpe3parcinder/openstack-cinder-volume-hpe3parcinder16-2
+      - hpe3parcinder/openstack-cinder-volume-hpe3parcinder17-1
+      - hpe3parcinder/openstack-cinder-volume-hpe3parcinder18-0
+    - product: Red Hat certified OpenShift operator
+      product_type: openshift-operator
+      standard: Red Hat OpenShift Operator Certification (certified-operator-index)
+      lapsed: false
+      operator_packages: 3
+      products_sample:
+      - hpe-csi-operator
+      ocp_versions:
+      - '4.21'
+      - '4.22'
+      - '5.0'
+    signal_note: 'certified_products = one entry per certified product TYPE (container image, OpenShift operator),
+      standard named on each; lapsed: true when no certified item of that type is current (containers: all Deprecated
+      / past EOL / unpublished; operators: absent from the three newest certified-operator indexes); repository
+      and package counts are context, never counted'
+    detected_by: sweep-red-hat-certified-ecosystem.py
+    detected: '2026-10-22'
+    other_registrations:
+    - HPE [hpeoneview]
+    - HPE [hpestorage]
+    - HEWLETT PACKARD ENTERPRISE COMPANY [maprtech]
+  status: not-a-workflow
+  arazzo: null
+- slug: hpe-nist-cryptographic-module-validation-program-fips-140
+  label: NIST Cryptographic Module Validation Program (FIPS 140)
+  partner_name: NIST Cryptographic Module Validation Program (FIPS 140)
+  category: FIPS 140 cryptographic module validation (NIST / CCCS CMVP)
+  type: register
+  channel: standard-directory
+  evidence: https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search/all
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: 'NIST CMVP validated cryptographic modules (csrc.nist.gov validated-modules search: active + historical)
+      and Modules In Process list'
+    standard: FIPS 140-2 / FIPS 140-3
+    spec_file: null
+    role: fips-140-validated-vendor
+    registered_name: Hewlett Packard Enterprise
+    matched_domain: hpe.com
+    matched_by: domain+verified
+    signal_note: 'certified_products = one entry per (FIPS 140 edition, CMVP module type) held; a pair whose certificates
+      are all on the historical list is lapsed: true; Modules In Process are listing only (in_process), never certified;
+      certificate and module counts are context, never counted'
+    detected_by: sweep-nist-cmvp-fips-140-modules.py
+    detected: '2026-10-22'
+    certified_products:
+    - product: FIPS 140-2 Hardware cryptographic module
+      product_type: Hardware
+      standard: FIPS 140-2
+      status: Historical
+      lapsed: true
+      validated: '2020-12-10'
+    - product: FIPS 140-2 Software cryptographic module
+      product_type: Software
+      standard: FIPS 140-2
+      status: Historical
+      lapsed: true
+      validated: '2025-08-25'
+    - product: FIPS 140-3 Firmware cryptographic module
+      product_type: Firmware
+      standard: FIPS 140-3
+      status: Active
+      lapsed: false
+      validated: '2025-01-09'
+    - product: FIPS 140-3 Hardware cryptographic module
+      product_type: Hardware
+      standard: FIPS 140-3
+      status: Active
+      lapsed: false
+      validated: '2026-09-01'
+    - product: FIPS 140-3 Software cryptographic module
+      product_type: Software
+      standard: FIPS 140-3
+      status: Active
+      lapsed: false
+      validated: '2026-09-29'
+    - product: FIPS 140-3 Software-hybrid cryptographic module
+      product_type: Software-hybrid
+      standard: FIPS 140-3
+      status: Active
+      lapsed: false
+      validated: '2026-09-22'
+    in_process:
+    - FIPS 140-3 (Comment Resolution - CMVP (10/13/2026))
+    - FIPS 140-3 (Comment Resolution - Lab (10/14/2026))
+    - FIPS 140-3 (Comment Resolution - Lab (10/8/2026))
+    - FIPS 140-3 (Comment Resolution - Lab (7/6/2026))
+    - FIPS 140-3 (Comment Resolution - Lab (9/23/2026))
+    - FIPS 140-3 (Pending Review (10/14/2026))
+    - FIPS 140-3 (Review (10/8/2026))
+    - FIPS 140-3 (Review (8/12/2026))
+    - FIPS 140-3 (Review (8/3/2026))
+    - FIPS 140-3 (Review (9/15/2026))
+    - FIPS 140-3 (Review (9/18/2026))
+    vendor_country: USA
+    identity_source: register website (CMVP certificate Vendor panel)
+    other_registrations:
+    - HPE Juniper Networking
+  status: not-a-workflow
+  arazzo: null
