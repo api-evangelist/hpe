@@ -492,3 +492,95 @@
     identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
   status: not-a-workflow
   arazzo: null
+- slug: hpe-wi-fi-alliance-certified-products
+  label: Wi-Fi Alliance certified products
+  partner_name: Wi-Fi Alliance certified products
+  category: Wi-Fi certification
+  type: register
+  channel: standard-directory
+  evidence: https://www.wi-fi.org/product-finder
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: Wi-Fi Alliance product finder (wi-fi.org/product-finder; prf.cert.wi-fi.org public JSON / CSV)
+    standard: Wi-Fi CERTIFIED
+    spec_file: null
+    role: wi-fi-certified-product
+    registered_name: Hewlett Packard Enterprise
+    register_id: WFA142084
+    matched_domain: null
+    matched_by: register-name
+    register_name_note: register-name 'hewlettpackardenterprise' = hpe; wikidata P856 hpe.com agrees or unheld
+    certified_products:
+    - product: Routers
+      lapsed: false
+      newest_certification: '2026-10-08'
+      generations:
+      - Wi-Fi 7
+      - Wi-Fi 6
+      - Wi-Fi 5 (ac)
+      - Wi-Fi 4 (n)
+    products_sample:
+    - '503'
+    - A3200 Multiservice Mobility Controller/AP104 Access Point
+    - A3400 Multiservice Mobility Controller/AP104 Access Point
+    - A3400 Multiservice Mobility Controller/AP60 Access Point
+    - A3600 Multiservice Mobility Controller/AP104 Access Point
+    - A3600 Multiservice Mobility Controller/AP105
+    - A6000 Multiservice Mobility Controller/AP104 Access Point
+    - A620 Multiservice Mobility Controller/AP104 Access Point
+    signal_note: certified_products = one entry per Wi-Fi Alliance product category, never per product, variant
+      or CID; generations are context. Wi-Fi CERTIFIED does not expire and the finder marks nothing withdrawn, so
+      lapsed is false
+    detected_by: sweep-wireless-connectivity-certification.py
+    detected: '2026-10-22'
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  status: not-a-workflow
+  arazzo: null
+- slug: hpe-us-epa-energy-star
+  label: US EPA ENERGY STAR
+  partner_name: US EPA ENERGY STAR
+  category: ENERGY STAR product certification
+  type: register
+  channel: standard-directory
+  evidence: https://data.energystar.gov/d/8wj2-sec8
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: ENERGY STAR Model Index, all currently certified models (data.energystar.gov/resource/8wj2-sec8)
+    standard: ENERGY STAR (US EPA product specifications)
+    spec_file: null
+    role: energy-star-partner
+    registered_name: Hewlett Packard Enterprise
+    register_id: https://data.energystar.gov/d/8wj2-sec8
+    matched_domain: hpe.com
+    matched_by: domain+verified
+    certified_products:
+    - product: Data Center Storage
+      product_type: Data Center Storage
+      lapsed: false
+      brands:
+      - HPE
+      - HPE Primera
+      - Hewlett Packard Enterprise
+      first_certified: '2021-03-11'
+    - product: Enterprise Servers
+      product_type: Enterprise Servers
+      lapsed: false
+      brands:
+      - Hewlett Packard Enterprise
+      first_certified: '2023-09-01'
+    connected_product_types: []
+    signal_note: 'certified_products = ONE entry per ENERGY STAR product category with a currently certified model
+      (the Model Index lists current certifications only, so lapsed is False; delisted models drop out); connected:
+      true where the category''s dataset flags connected / network capability for this partner''s models (Smart
+      Thermostats and Connected lighting are connected by definition). Brands are context; model counts are never
+      counted.'
+    detected_by: sweep-energy-star-certified-products.py
+    detected: '2026-10-22'
+    identity: wikidata Q19923099 'Hewlett Packard Enterprise' P856 https://www.hpe.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  status: not-a-workflow
+  arazzo: null
