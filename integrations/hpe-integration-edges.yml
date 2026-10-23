@@ -48,6 +48,9 @@ checked:
 - https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search?SearchMode=Advanced&Standard=140-2&CertificateStatus=Historical&ValidationYear=0
 - ansible/integrations/ansible-integration-edges.yml
 - chef-software/integrations/chef-software-integration-edges.yml
+- https://aur.archlinux.org/cgit/aur.git/tree/.SRCINFO
+- https://aur.archlinux.org/packages-meta-ext-v1.json.gz
+- https://aur.archlinux.org/rpc/v5/info
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
 - splunk/integrations/splunk-integration-edges.yml
@@ -1095,4 +1098,38 @@ edges:
   detected: '2026-10-22'
   detected_by: mirror-platform-listings.py
   category: configuration-management content listing (Chef cookbook)
+- partner_name: Arch User Repository (AUR)
+  partner: null
+  partner_match: null
+  type: register
+  direction: provider-built
+  category: official CLI (Arch User Repository (AUR))
+  evidence: https://aur.archlinux.org/packages/hpe-scripting-toolkit
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: Arch User Repository (AUR) (public package index)
+    spec_file: null
+    packages:
+    - name: hpe-scripting-toolkit
+      kind: aur
+      version: 11.60-5
+      released: '2026-05-22'
+      released_field: AUR LastModified
+      out_of_date: false
+      lapsed: false
+      page: https://aur.archlinux.org/packages/hpe-scripting-toolkit
+      upstream: https://downloads.linux.hpe.com/SDR/project/stk/
+      cli: 'AUR description: Command-line tools for scripting HP ProLiant BIOS configuration'
+      repo_leg: domain:hpe.com
+      publisher_leg: artifact-domain:hpe.com
+      matched_by: domain+name-among-holders
+    current: true
+    signal_note: 'the provider''s own command-line tool packaged for Arch Linux (community-maintained PKGBUILD whose
+      upstream and source artifact are the provider''s): distribution, not an integration; lapsed = flagged out-of-date
+      or not updated in 24 months'
+    detected_by: sweep-aur-vendor-cli-packages.py
+    detected: '2026-10-23'
+  detected_by: sweep-aur-vendor-cli-packages.py
+  first_seen: '2026-10-23'
 marketplace_apps: []
