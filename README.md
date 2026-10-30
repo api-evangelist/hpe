@@ -1,4 +1,4 @@
-# Hewlett Packard Enterprise (hpe)
+# Hewlett Packard Enterprise
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,65 +66,123 @@
 
 Hewlett Packard Enterprise (HPE) is a global edge-to-cloud technology company providing servers, storage, networking, and hybrid cloud services, with HPE GreenLake serving as the unified edge-to-cloud platform delivering infrastructure as a service. The HPE GreenLake developer platform exposes OpenAPI 3.0 REST APIs covering compute, storage, networking, data services, identity, and workspace management, all authenticated via OAuth 2.0 client credentials and bearer tokens through a unified global API gateway.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/hpe/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/hpe/refs/heads/main/apis.yml)
+**Areas:** Cloud · Edge to Cloud · Infrastructure-as-a-Service · Compute · Storage · Networking · Hybrid Cloud · Enterprise IT · Data Center
 
-## Scope
+## Hewlett Packard Enterprise on APIs.io
 
-- **Type:** Index
+Everything profiled for Hewlett Packard Enterprise is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hpe/](https://apis.io/providers/hpe/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Cloud
-- Edge to Cloud
-- Infrastructure as a Service
-- Compute
-- Storage
-- Networking
-- Hybrid Cloud
-- Enterprise IT
+- [HPE GreenLake API](https://apis.io/apis/hpe/greenlake-api/) — Unified REST API gateway for HPE GreenLake edge-to-cloud services including Compute Ops Management, Data Services Cloud Console, identity, workspaces, and…
+- [Hewlett Packard Enterprise Authorization API](https://apis.io/apis/hpe/hpe-authorization-api/) — The Authorization API from Hewlett Packard Enterprise — 7 operation(s) for authorization.
+- [Hewlett Packard Enterprise Identity API](https://apis.io/apis/hpe/hpe-identity-api/) — The Identity API from Hewlett Packard Enterprise — 2 operation(s) for identity.
+- [Hewlett Packard Enterprise Workspaces API](https://apis.io/apis/hpe/hpe-workspaces-api/) — The Workspaces API from Hewlett Packard Enterprise — 3 operation(s) for workspaces.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### HPE GreenLake API
+Model Context Protocol servers that expose the API to agents.
 
-Unified REST API gateway for HPE GreenLake edge-to-cloud services including Compute Ops Management, Data Services Cloud Console, identity, workspaces, and API client credentials. Conforms to OpenAPI 3.0 and authenticates with OAuth 2.0 client credentials that issue short-lived JWT bearer tokens.
+- [hpe-mcp.yml](https://apis.io/servers/hpe/hpe-mcp-yml/)
 
-- **Human URL:** [https://developer.greenlake.hpe.com](https://developer.greenlake.hpe.com)
-- **Base URL:** `https://global.api.greenlake.hpe.com`
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Cloud
-- Compute
-- Storage
-- Data Services
-- Identity
-- OAuth 2.0
+- [Hpe Agentic Access](https://apis.io/agentic-access/hpe/hpe-agentic-access/)
 
-#### Properties
+#### Collections (4)
 
-- [Documentation](https://developer.greenlake.hpe.com/docs/greenlake/guides)
-- [Authentication](https://developer.greenlake.hpe.com/docs/greenlake/guides/public/authentication/authentication)
-- [A P I  Catalog](https://developer.greenlake.hpe.com/docs/greenlake/services)
-- [Credentials  Guide](https://developer.greenlake.hpe.com/docs/greenlake/services/credentials/public/guide)
-- [Postman Collection](collections/hpe.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/hpe.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-## Common Properties
+- [HPE GreenLake API](https://apis.io/collections/hpe/open-hpe/)
+- [HPE GreenLake Authorization API](https://apis.io/collections/hpe/open-hpe-authorization-api/)
+- [HPE GreenLake Authorization Identity API](https://apis.io/collections/hpe/open-hpe-identity-api/)
+- [HPE GreenLake Authorization Workspaces API](https://apis.io/collections/hpe/open-hpe-workspaces-api/)
 
-- [GitHub Organization](https://github.com/HewlettPackard)
-- [LinkedIn](https://www.linkedin.com/company/hewlett-packard-enterprise)
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Hewlett Packard Enterprise API Rules](https://apis.io/rules/hpe/hpe-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Hpe Authentication](https://apis.io/security/hpe/hpe-authentication/)
+- [Hpe Domain Security](https://apis.io/security/hpe/hpe-domain-security/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Hpe Rate Limits](https://apis.io/rate-limits/hpe/hpe-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.hpe.com)
 - [Documentation](https://developer.greenlake.hpe.com)
-- [Developer  Portal](https://developer.hpe.com)
-- [Sign Up](https://common.cloud.hpe.com/sign-up)
+- [Getting started](https://developer.greenlake.hpe.com/docs/greenlake/services/compute-ops-mgmt/ahs/guide)
+- [GitHub](https://github.com/HewlettPackard)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 40.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 48.7 |
+| Contract governance | 22.0 |
+| Operational transparency | 57.9 |
+| Developer ergonomics | 44.6 |
+| Access clarity | 13.2 |
+
+**Agent readiness 22.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/hpe/](https://apis.io/providers/hpe/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Hewlett Packard Enterprise: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hpe/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
